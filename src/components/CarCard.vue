@@ -35,7 +35,7 @@ export default {
   props: {
     car: {
       type: Car,
-      required: true
+      required: true,
     }
   },
   // NOTE if we want to use the data stored withing props in our setup, we have to pass it down as an argument
