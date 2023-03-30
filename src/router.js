@@ -32,11 +32,16 @@ const routes = [
     component: loadPage('HousesPage')
   },
   {
+    path: '/houses/:houseId',
+    name: 'HouseDetails',
+    component: loadPage('HouseDetailsPage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),
     beforeEnter: authGuard
-  }
+  },
 ]
 
 export const router = createRouter({
