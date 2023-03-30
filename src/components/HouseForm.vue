@@ -12,20 +12,28 @@
     <div class="modal-body">
       <div class="mb-3">
         <label for="bedrooms" class="form-label">Bedrooms</label>
-        <input type="number" required class="form-control" id="bedrooms">
+        <input type="number" name="bedrooms" required class="form-control" id="bedrooms">
       </div>
       <div class="mb-3">
         <label for="bathrooms" class="form-label">Bathrooms</label>
-        <input type="number" required class="form-control" id="bathrooms">
+        <input type="number" name="bathrooms" required class="form-control" id="bathrooms">
       </div>
       <div class="mb-3">
         <label for="levels" class="form-label">Levels</label>
-        <input type="number" required class="form-control" id="levels">
+        <input type="number" name="levels" required class="form-control" id="levels">
+      </div>
+      <div class="mb-3">
+        <label for="imgUrl" class="form-label">Image URL</label>
+        <input type="text" class="form-control" required name="imgUrl" id="imgUrl">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" name="price" required id="price" class="form-control">
       </div>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
+      <button type="Submit" class="btn btn-primary">Save changes</button>
     </div>
   </form>
 </template>
@@ -46,7 +54,7 @@ export default {
     }
   },
   setup(props) {
-
+    const router = useRouter()
     return {
 
     }

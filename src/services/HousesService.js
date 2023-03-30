@@ -17,5 +17,19 @@ class HousesService {
         logger.log('find house', res.data)
         AppState.house = new House(res.data)
     }
+
+    async createHouse(houseData) {
+        const res = await api.post('api/Houses', houseData)
+        logger.log('create house', res.data)
+        const newHouse = new House(res.data)
+        AppState.houses.push(newHouse)
+        return newHouse
+    }
+
+    async editHouse(houseData) {
+        const res = await api.put('api/Houses/' + houseData.id, houseData)
+        logger.log('edit house', res.data)
+        AppState.house = new House(res.data)
+    }
 }
 export const housesService = new HousesService()
